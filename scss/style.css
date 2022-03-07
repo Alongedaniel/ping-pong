@@ -65,8 +65,8 @@ body .ball {
 
 body .paddle {
   --position: 50;
-  width: 0.7vw;
-  height: 10vh;
+  width: 1vh;
+  height: 15vh;
   background-color: var(--paddle-color);
   position: absolute;
   top: calc(var(--position) * 1vh);
