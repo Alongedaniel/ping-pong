@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --paddle-color: hsl(var(--hue), var(--saturation), 75%);
+  --background-color: hsl(var(--hue), var(--saturation), 20%);
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.paddle {
+  --position: 50;
+  width: 0.7vw;
+  height: 10vh;
+  background-color: var(--paddle-color);
+  position: absolute;
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+}
+
+.paddle-left {
+  left: 1vw;
+}
+.paddle-right {
+  right: 1vw;
+}
+
+.ball {
+  --x: 50;
+  --y: 50;
+  width: 20px;
+  height: 20px;
+  background-color: var(--paddle-color);
+  border-radius: 50%;
+  position: absolute;
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
+  transform: translate(-50%, -50%);
+}
+
+.player-name {
+  display: flex;
+  padding: 0 1rem;
+  font-size: 25px;
+  font-weight: 900;
+  opacity: 0.5;
+}
+
+.names {
+  margin: 0.2rem;
+}
+
+.score > :first-child {
+  border-right: 0.5vh solid var(--paddle-color);
+}
